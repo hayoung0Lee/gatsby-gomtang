@@ -1,10 +1,11 @@
 import { Link } from "gatsby";
 import React from "react";
 import styled from "styled-components";
+import { logoSize } from "../../utils/constants";
 
 const LogoStyle = styled.div`
-  width: 200px;
-  height: 60px;
+  width: ${logoSize.width}px;
+  height: ${logoSize.height}px;
   border: 1px solid black;
 
   @media screen and (max-width: 1100px) {
@@ -13,6 +14,7 @@ const LogoStyle = styled.div`
     background-color: green;
   }
 `;
+
 const Logo = () => (
   <LogoStyle>
     <Link

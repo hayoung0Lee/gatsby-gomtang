@@ -3,6 +3,7 @@ import React, { FC } from "react";
 import Logo from "./logo";
 import styled from "styled-components";
 import MenuItem from "./menu-item";
+import { headerHeight } from "../../utils/constants";
 
 const MenuWrapper = styled.menu`
   margin: 0;
@@ -10,7 +11,7 @@ const MenuWrapper = styled.menu`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  height: ${headerHeight}px;
 `;
 
 const BiggerMenu: FC = () => {
