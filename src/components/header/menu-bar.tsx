@@ -1,6 +1,5 @@
 import React, { useState, FC } from "react";
 import { useMediaQuery } from "react-responsive";
-
 import SmallerMenu from "./smaller-menu";
 import BiggerMenu from "./bigger-menu";
 

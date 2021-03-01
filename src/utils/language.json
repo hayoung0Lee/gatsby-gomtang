@@ -1,0 +1,11 @@
+{
+  "menu": {
+    "about": "다락재 쉼터",
+    "browse": "메뉴 소개",
+    "event": "이벤트",
+    "contact": "게시판"
+  },
+  "about": {
+    "how-to-come": "찾아오시는 길"
+  }
+}

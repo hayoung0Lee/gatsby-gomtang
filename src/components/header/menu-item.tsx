@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import styled from "styled-components";
+import { Typography } from "@material-ui/core";
 
 const MenuItemWrapper = styled.div`
   width: 150px;
@@ -10,7 +11,11 @@ const MenuItemWrapper = styled.div`
 `;
 
 const MenuItem: FC<any> = ({ children }) => {
-  return <MenuItemWrapper>{children}</MenuItemWrapper>;
+  return (
+    <MenuItemWrapper>
+      <Typography>{children}</Typography>
+    </MenuItemWrapper>
+  );
 };
 
 export default MenuItem;

@@ -12,6 +12,7 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
+import { useStaticQuery, graphql } from "gatsby";
 
 const drawerWidth = 240;
 
@@ -94,6 +95,19 @@ const SmallerMenu: FC = () => {
     setOpen(false);
   };
 
+  const data = useStaticQuery(graphql`
+    {
+      utilsJson {
+        menu {
+          about
+          browse
+          contact
+          event
+        }
+      }
+    }
+  `);
+
   return (
     <>
       <HamburgerMenu>
@@ -125,10 +139,10 @@ const SmallerMenu: FC = () => {
         <Divider />
         <List>
           {[
-            ["About", "/about/"],
-            ["Browse", "/browse/"],
-            ["Event", "/event/"],
-            ["Contact", "/contact/"],
+            [`${data.utilsJson.menu.about}`, "/about/"],
+            [`${data.utilsJson.menu.browse}`, "/browse/"],
+            [`${data.utilsJson.menu.event}`, "/event/"],
+            [`${data.utilsJson.menu.contact}`, "/contact/"],
           ].map(([text, url], index) => (
             <ListItem button key={text}>
               {/* <ListItemIcon>

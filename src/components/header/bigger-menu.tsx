@@ -4,6 +4,8 @@ import Logo from "./logo";
 import styled from "styled-components";
 import MenuItem from "./menu-item";
 import { headerHeight } from "../../utils/constants";
+import { useStaticQuery, graphql } from "gatsby";
+import ListItem from "@material-ui/core/ListItem";
 
 const MenuWrapper = styled.menu`
   margin: 0;
@@ -15,46 +17,67 @@ const MenuWrapper = styled.menu`
 `;
 
 const BiggerMenu: FC = () => {
+  const data = useStaticQuery(graphql`
+    {
+      utilsJson {
+        menu {
+          about
+          browse
+          contact
+          event
+        }
+      }
+    }
+  `);
+
   return (
     <>
       <Logo />
       <MenuWrapper>
-        <Link
-          to="/about/"
-          style={{
-            color: `inherit`,
-            textDecoration: `none`,
-          }}
-        >
-          <MenuItem>About</MenuItem>
-        </Link>
-        <Link
-          to="/browse/"
-          style={{
-            color: `inherit`,
-            textDecoration: `none`,
-          }}
-        >
-          <MenuItem>Browse Item</MenuItem>
-        </Link>
-        <Link
-          to="/event/"
-          style={{
-            color: `inherit`,
-            textDecoration: `none`,
-          }}
-        >
-          <MenuItem>Event</MenuItem>
-        </Link>
-        <Link
-          to="/contact/"
-          style={{
-            color: `inherit`,
-            textDecoration: `none`,
-          }}
-        >
-          <MenuItem>Contact Page</MenuItem>
-        </Link>
+        <ListItem button>
+          <Link
+            to={"/about/"}
+            style={{
+              color: `inherit`,
+              textDecoration: `none`,
+            }}
+          >
+            <MenuItem>{data.utilsJson.menu.about}</MenuItem>
+          </Link>
+        </ListItem>
+        <ListItem button>
+          <Link
+            to={"/browse/"}
+            style={{
+              color: `inherit`,
+              textDecoration: `none`,
+            }}
+          >
+            <MenuItem>{data.utilsJson.menu.browse}</MenuItem>
+          </Link>
+        </ListItem>
+        <ListItem button>
+          <Link
+            to={"/event/"}
+            style={{
+              color: `inherit`,
+              textDecoration: `none`,
+            }}
+          >
+            <MenuItem>{data.utilsJson.menu.event}</MenuItem>
+          </Link>
+        </ListItem>
+        <ListItem button>
+          <Link
+            to={"/contact/"}
+            style={{
+              color: `inherit`,
+              textDecoration: `none`,
+            }}
+          >
+            <MenuItem>{data.utilsJson.menu.contact} </MenuItem>
+          </Link>
+        </ListItem>
       </MenuWrapper>
     </>
   );
