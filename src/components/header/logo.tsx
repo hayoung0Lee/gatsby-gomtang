@@ -16,17 +16,15 @@ const LogoStyle = styled.div`
 `;
 
 const Logo = () => (
-  <LogoStyle>
-    <Link
-      to="/"
-      style={{
-        color: `inherit`,
-        textDecoration: `none`,
-      }}
-    >
-      logo image
-    </Link>
-  </LogoStyle>
+  <Link
+    to="/"
+    style={{
+      color: `inherit`,
+      textDecoration: `none`,
+    }}
+  >
+    <LogoStyle>logo image</LogoStyle>
+  </Link>
 );
 
 export default Logo;
