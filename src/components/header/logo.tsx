@@ -11,6 +11,7 @@ const LogoStyle = styled.div`
   @media screen and (max-width: 1100px) {
     position: absolute;
     left: calc(50% - 100px);
+    top: 5px;
     background-color: green;
   }
 `;

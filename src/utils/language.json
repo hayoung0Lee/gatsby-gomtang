@@ -9,5 +9,12 @@
     "how-to-come": "찾아오시는 길",
     "map": "네이버 지도",
     "how-to-come-alt": "다락재 곰탕 오시는 길"
+  },
+  "browse": {
+    "menu1": "곰탕",
+    "menu2": "수육",
+    "menu1-alt": "곰탕",
+    "menu2-alt": "수육",
+    "menu1-desc": "네이버 스마트 스토어에서 곰탕 구매하기!"
   }
 }
