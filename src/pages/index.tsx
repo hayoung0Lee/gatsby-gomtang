@@ -1,7 +1,7 @@
-import * as React from "react";
+import React, { FC } from "react";
 import Layout from "../components/layout";
 
-const IndexPage = () => {
+const IndexPage: FC<React.ReactNode> = ({ children }) => {
   return (
     <Layout>
       <div>Index Page</div>
