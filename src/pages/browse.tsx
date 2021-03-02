@@ -3,15 +3,9 @@ import Layout from "../components/layout";
 import { Typography } from "@material-ui/core";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
-
-const ImgWrapper = styled.div`
-  border: 1px solid black;
-  margin: auto;
-  max-width: fit-content;
-  margin-top: 20px;
-  margin-bottom: 20px;
-`;
-
+import { ImgWrapper } from "../utils/common";
+import Loader from "../utils/loader";
+import "../utils/loader.css";
 const BrowseLayout = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -61,7 +55,8 @@ const BrowsePage = () => {
       <BrowseLayout>
         <ImgWrapper>
           <Typography variant="h5">{data.utilsJson.browse.menu1}</Typography>
-          <img
+          <Loader />
+          {/* <img
             srcSet={data.menu1.nodes[0]["childImageSharp"]["fluid"]["srcSet"]}
             sizes="(max-width: 200px) 180px,
             (max-width: 400px) 250px,
@@ -69,7 +64,7 @@ const BrowsePage = () => {
             600px"
             src={data.menu1.nodes[0]["childImageSharp"]["fluid"]["src"]}
             alt={data.utilsJson.browse.menu1_alt}
-          />
+          /> */}
           <Typography variant="h6">
             <a href="https://smartstore.naver.com/drj_gomtang/products/4856718842?">
               {data.utilsJson.browse.menu1_desc}
