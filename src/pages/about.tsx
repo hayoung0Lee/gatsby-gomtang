@@ -4,6 +4,7 @@ import { Typography } from "@material-ui/core";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 import { ImgWrapper } from "../utils/common";
+import Map from "../components/about/map";
 
 const AboutLayout = styled.div`
   display: flex;
@@ -53,8 +54,11 @@ const AboutPage = () => {
             alt={data.utilsJson.about.how_to_come_alt}
           />
         </ImgWrapper>
-        <ImgWrapper>
-          <Typography variant="h5">{data.utilsJson.about.map}</Typography>
+        {/* <ImgWrapper> */}
+        <div>
+          <Map />
+        </div>
+        {/* <Typography variant="h5">{data.utilsJson.about.map}</Typography>
           <img
             srcSet={data.allFile.nodes[0]["childImageSharp"]["fluid"]["srcSet"]}
             sizes="(max-width: 200px) 180px,
@@ -63,8 +67,8 @@ const AboutPage = () => {
             600px"
             src={data.allFile.nodes[0]["childImageSharp"]["fluid"]["src"]}
             alt={data.utilsJson.about.how_to_come_alt}
-          />
-        </ImgWrapper>
+          /> */}
+        {/* </ImgWrapper> */}
       </AboutLayout>
     </Layout>
   );
