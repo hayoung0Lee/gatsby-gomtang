@@ -11,11 +11,11 @@ const AboutLayout = styled.div`
   display: grid;
   min-height: inherit;
 
-  // repeat rows 6 times and each one is 100 px
-  grid-template-rows: repeat(6, 100px);
+  // repeat rows 6 times and each one is 1fr
+  grid-template-rows: repeat(6, 1fr);
 
-  // repeat columns 6 times and each one is 100 px
-  grid-template-columns: repeat(6, 100px);
+  // repeat columns 5 times and each one is 1fr
+  grid-template-columns: repeat(5, 1fr);
 
   // putting gap beteween rows and columns
   grid-gap: 10px;
