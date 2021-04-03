@@ -53,6 +53,20 @@ const AboutLayout = styled.div`
     grid-row: span 2;
     grid-column: span 3;
   }
+
+  & > div.two {
+    background-image: url(https://source.unsplash.com/vZlTg_McCDo/800x600);
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    color: white;
+    background-size: cover;
+    background-position: top left;
+    transition: all ease-in-out 300ms;
+    &: hover {
+      background-blend-mode: initial;
+      background-position: center;
+    }
+  }
 `;
 
 const AboutPage = () => {
@@ -83,7 +97,7 @@ const AboutPage = () => {
     <Layout>
       <AboutLayout>
         <div className="medium">one</div>
-        <div className="large">two</div>
+        <div className="large two">two</div>
         <div className="medium">three</div>
         <div className="small">four</div>
         <div className="tall">five</div>
