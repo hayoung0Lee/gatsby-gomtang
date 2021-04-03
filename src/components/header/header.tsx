@@ -7,7 +7,6 @@ const HeaderWrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // background-color: grey;
   border: 1px solid black;
 `;
 

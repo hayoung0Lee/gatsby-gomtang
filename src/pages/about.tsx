@@ -7,10 +7,18 @@ import { ImgWrapper } from "../utils/common";
 import Map from "../components/about/map";
 
 const AboutLayout = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 30px;
+  border: 1px solid black;
+  display: grid;
+  min-height: inherit;
+
+  & > div {
+    background-color: red;
+    border: 1px solid black;
+    // to make text centered
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const AboutPage = () => {
@@ -40,35 +48,12 @@ const AboutPage = () => {
   return (
     <Layout>
       <AboutLayout>
-        <ImgWrapper>
-          <Typography variant="h5">
-            {data.utilsJson.about.how_to_come}
-          </Typography>
-          <img
-            srcSet={data.allFile.nodes[0]["childImageSharp"]["fluid"]["srcSet"]}
-            sizes="(max-width: 200px) 180px,
-            (max-width: 400px) 250px,
-            (max-width: 800px) 450px,
-            600px"
-            src={data.allFile.nodes[0]["childImageSharp"]["fluid"]["src"]}
-            alt={data.utilsJson.about.how_to_come_alt}
-          />
-        </ImgWrapper>
-        {/* <ImgWrapper> */}
-        <div>
-          <Map />
-        </div>
-        {/* <Typography variant="h5">{data.utilsJson.about.map}</Typography>
-          <img
-            srcSet={data.allFile.nodes[0]["childImageSharp"]["fluid"]["srcSet"]}
-            sizes="(max-width: 200px) 180px,
-            (max-width: 400px) 250px,
-            (max-width: 800px) 450px,
-            600px"
-            src={data.allFile.nodes[0]["childImageSharp"]["fluid"]["src"]}
-            alt={data.utilsJson.about.how_to_come_alt}
-          /> */}
-        {/* </ImgWrapper> */}
+        <div>one</div>
+        <div>two</div>
+        <div>three</div>
+        <div>four</div>
+        <div>five</div>
+        <div>six</div>
       </AboutLayout>
     </Layout>
   );
