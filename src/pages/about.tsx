@@ -28,6 +28,31 @@ const AboutLayout = styled.div`
     justify-content: center;
     align-items: center;
   }
+
+  & > div.medium {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+
+  & > div.large {
+    grid-row: span 3;
+    grid-column: span 3;
+  }
+
+  & > div.small {
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+
+  & > div.tall {
+    grid-row: span 3;
+    grid-column: span 2;
+  }
+
+  & > div.wide {
+    grid-row: span 2;
+    grid-column: span 3;
+  }
 `;
 
 const AboutPage = () => {
@@ -57,12 +82,12 @@ const AboutPage = () => {
   return (
     <Layout>
       <AboutLayout>
-        <div>one</div>
-        <div>two</div>
-        <div>three</div>
-        <div>four</div>
-        <div>five</div>
-        <div>six</div>
+        <div className="medium">one</div>
+        <div className="large">two</div>
+        <div className="medium">three</div>
+        <div className="small">four</div>
+        <div className="tall">five</div>
+        <div className="wide">six</div>
       </AboutLayout>
     </Layout>
   );
