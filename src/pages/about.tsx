@@ -45,8 +45,8 @@ const AboutLayout = styled.div`
   }
 
   & > div.tall {
-    grid-row: span 3;
-    grid-column: span 2;
+    grid-row: 4 / span 3;
+    grid-column: 4 / span 2;
   }
 
   & > div.wide {
