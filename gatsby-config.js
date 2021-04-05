@@ -1,41 +1,61 @@
 module.exports = {
   siteMetadata: {
     title: "Gatsby-Gomtang",
+    description: `A restaurant site with Gatsby`,
+    menuLinks: [
+      {
+        name: "home",
+        link: "/",
+      },
+      {
+        name: "about",
+        link: "/about",
+      },
+      {
+        name: "browse",
+        link: "/browse",
+      },
+      {
+        name: "event",
+        link: "/event",
+      },
+      {
+        name: "contact",
+        link: "/contact",
+      },
+    ],
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-material-ui`,
-      options: {
-        stylesProvider: {
-          injectFirst: true,
-        },
-      },
-    },
     "gatsby-plugin-styled-components",
-    "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
-    // "gatsby-plugin-sitemap",
-    {
-      resolve: "gatsby-plugin-manifest",
-      options: {
-        icon: "src/images/icon.png",
-      },
-    },
-    "gatsby-transformer-sharp",
+    // source file first and make node
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "images",
-        path: "./src/images/",
+        name: "images", // anything
+        path: "./src/images/", // where we save all our images
       },
-      __key: "images",
     },
-    `gatsby-transformer-json`,
+    // transform image
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    // for language
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `./src/utils/`,
+        name: "language",
+        path: `./language`,
       },
     },
+    `gatsby-transformer-json`,
+    // Gatsby pwa
+    // {
+    //   resolve: "gatsby-plugin-manifest",
+    //   options: {
+    //     icon: "src/images/icon.png",
+
+    //   },
+    // },
+    // https://www.gatsbyjs.com/docs/progressive-web-app/
   ],
 };

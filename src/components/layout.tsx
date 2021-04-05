@@ -1,17 +1,23 @@
 import React, { FC } from "react";
-import Header from "./header/header";
+import Header from "./header";
 import Main from "./main";
 import Footer from "./footer";
-import Container from "@material-ui/core/Container";
 import "./layout.css";
+import styled from "styled-components";
+
+const LayoutStyle = styled.div`
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: 70px auto 100px; // auto As a maximum represents the largest max-content size of the items in that track.
+`;
 
 const Layout: FC<any> = ({ children }) => {
   return (
-    <Container maxWidth="lg">
+    <LayoutStyle>
       <Header />
       <Main>{children}</Main>
       <Footer />
-    </Container>
+    </LayoutStyle>
   );
 };
 
