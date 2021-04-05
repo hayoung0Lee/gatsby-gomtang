@@ -7,11 +7,12 @@ const SectionStyle = styled.section`
   // grid for section
   grid-column: 2 / -2;
   border-bottom: 1px solid green;
-  min-height: 300px;
+  min-height: 400px;
+  margin-top: 50px;
 
   // make section to grid container
-  //   background: url("https://images.unsplash.com/photo-1518176258769-f227c798150e")
-  // center;
+  background: url("https://images.unsplash.com/photo-1518176258769-f227c798150e")
+    center;
   background-size: cover;
 
   /* Grid styles */
@@ -23,13 +24,14 @@ const SectionStyle = styled.section`
   // auto-fit과 minmax를 함께 사용하면 언제든지 꽉 채우게 된다.
   // 아래의 예시에서는 최소 240px을 보장하고, 공간이 그러고도 남으면 서로 equally divide해서 1fr가진다
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  color: white;
 
   & h1 {
     text-align: center;
   }
 
   & article {
-    border: 1px solid black;
+    // border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: space-between;
