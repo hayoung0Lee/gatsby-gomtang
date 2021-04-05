@@ -1,7 +1,5 @@
 import React, { FC } from "react";
 import styled from "styled-components";
-// import Logo from "./logo";
-// import MenuBar from "./menu-bar";
 
 const NavStyle = styled.nav`
   border-bottom: 1px solid green;
@@ -38,7 +36,7 @@ const Nav: FC = () => {
   return (
     <NavStyle>
       <ul>
-        <li>옥이 곰탕</li>
+        <li>다락재 쉼터</li>
         <li>메뉴 소개</li>
         <li>찾아오시는 길</li>
         <li>Contact</li>

@@ -1,10 +1,12 @@
 import React, { FC } from "react";
 import Layout from "../components/layout";
+import Banner from "../components/banner";
 
 const IndexPage: FC<React.ReactNode> = ({ children }) => {
   return (
     <Layout>
-      <div>Index Page</div>
+      <Banner />
+      <section>index content</section>
     </Layout>
   );
 };
