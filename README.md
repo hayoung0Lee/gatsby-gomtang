@@ -10,6 +10,7 @@ This is a website for [다락재 쉼터](https://m.place.naver.com/restaurant/15
 - Gatsby
 - Redux
 - styled-component
+- Typescript
 
 ## Hosting
 
