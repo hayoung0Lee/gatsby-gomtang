@@ -29,7 +29,7 @@ const NavStyle = styled.nav`
   @media (max-width: 800px) {
     & ul {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
   }
 `;
