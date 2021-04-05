@@ -1,48 +1,32 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# Gatsby-Gomtang (v1)
 
-## 🚀 Quick start
+This is a website for [다락재 쉼터](https://m.place.naver.com/restaurant/15565163/home). You can still order food from [naver smartstore - 다락재 쉼터](https://smartstore.naver.com/drj_gomtang?NaPm=ct%3Dkn3wyuku%7Cci%3Dcheckout%7Ctr%3Dds%7Ctrx%3D%7Chk%3Dc39594238b44d3d82c04b9fae3ad15f47a05d4c1) but to provide more information about this restaurant, such as how to visit, the process they make their food etc, I am building this website
 
-1.  **Create a Gatsby site.**
+# Project stack
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+## Client
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+- React
+- Gatsby
+- Redux
+- styled-component
 
-2.  **Start developing.**
+## Hosting
 
-    Navigate into your new site’s directory and start it up.
+- Netlify
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+# Run on your machine and customize it as you wish
 
-3.  **Open the code and start customizing!**
+```
+git clone 'this project'
+npm install
+// develop mode
+npm run develop
 
-    Your site is now running at http://localhost:8000!
+// production testing
+npm run build && npm run serve
+```
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+# License
 
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+This is released under the MIT license. See [LICENSE](LICENSE) for details.
