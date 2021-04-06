@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Helmet } from "react-helmet";
+import { connect } from "react-redux";
+import { toggleMap } from "../state/app";
 
 const MapStyle = styled.div`
   * {
@@ -14,10 +15,17 @@ declare global {
   }
 }
 
-const Map = () => {
+const Map = ({
+  isMapInstalled,
+  dispatch,
+}: {
+  isMapInstalled: string;
+  dispatch: any;
+}) => {
+  console.log(isMapInstalled);
   // <!-- 3. 실행 스크립트 -->
   const executeScript = () => {
-    alert("executeScript");
+    // alert("executeScript");
     const scriptTag = document.createElement("script");
     const inlineScript = document.createTextNode(`new daum.roughmap.Lander({
     	"timestamp" : "1617690117752",
@@ -33,7 +41,7 @@ const Map = () => {
   // document.write 문제가 발생해서 해당 파일을 직접 가져온다음 수정했음
   const InstallScript = () => {
     (function () {
-      alert("installScript");
+      // alert("installScript");
       var c = location.protocol == "https:" ? "https:" : "http:";
       var a = "16137cec";
 
@@ -57,13 +65,18 @@ const Map = () => {
       scriptTag.src = b;
       document.body.append(scriptTag);
       scriptTag.onload = () => {
+        dispatch(toggleMap(true));
         executeScript();
       };
     })();
   };
 
   useEffect(() => {
-    InstallScript();
+    if (!isMapInstalled) {
+      InstallScript();
+    } else {
+      executeScript();
+    }
   }, []);
 
   return (
@@ -77,4 +90,8 @@ const Map = () => {
   );
 };
 
-export default Map;
+export default connect(
+  // @ts-ignore
+  (state) => ({ isMapInstalled: state.app.isMapInstalled }),
+  null
+)(Map);
