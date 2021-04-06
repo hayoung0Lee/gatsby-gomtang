@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { connect } from "react-redux";
 import { toggleMap } from "../state/app";
 import { InstallScript, executeScript } from "../utils/kakao-map";
-
 const MapStyle = styled.div`
   * {
     box-sizing: content-box;
@@ -16,7 +15,7 @@ declare global {
   }
 }
 
-const Map = ({
+const SmallMap = ({
   isMapInstalled,
   dispatch,
 }: {
@@ -25,11 +24,11 @@ const Map = ({
 }) => {
   const currentExecuteScript = () =>
     executeScript(`new daum.roughmap.Lander({
-    	"timestamp" : "1617690117752",
-    	"key" : "258ih",
-    	"mapWidth" : "640",
-    	"mapHeight" : "360"
-    }).render();`);
+		"timestamp" : "1617720029445",
+		"key" : "258t7",
+		"mapWidth" : "300",
+		"mapHeight" : "360"
+	}).render();`);
 
   useEffect(() => {
     if (!isMapInstalled) {
@@ -43,7 +42,7 @@ const Map = ({
     <MapStyle>
       {/* <!-- 1. 지도 노드 --> */}
       <div
-        id="daumRoughmapContainer1617690117752"
+        id="daumRoughmapContainer1617720029445"
         className="root_daum_roughmap root_daum_roughmap_landing"
       ></div>
     </MapStyle>
@@ -54,4 +53,4 @@ export default connect(
   // @ts-ignore
   (state) => ({ isMapInstalled: state.app.isMapInstalled }),
   null
-)(Map);
+)(SmallMap);
