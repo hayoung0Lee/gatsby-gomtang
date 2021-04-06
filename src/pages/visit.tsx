@@ -15,7 +15,7 @@ const VisitStyle = styled.div`
     grid-column: 2 / -2;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: 100px 100px auto;
+    grid-template-rows: 70px 70px auto;
 
     & > h1 {
       display: flex;
@@ -38,7 +38,7 @@ const VisitStyle = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      padding-bottom: ;
+      padding-bottom: 50px;
     }
   }
 `;
