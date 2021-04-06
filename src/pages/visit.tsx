@@ -20,7 +20,7 @@ const VisitStyle = styled.div`
     & > h1 {
       display: flex;
       justify-content: center;
-      align-items: end;
+      align-items: flex-end;
       font-size: 20px;
       color: #444441;
     }
