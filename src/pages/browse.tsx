@@ -1,9 +1,9 @@
 import React, { useContext, useState, useReducer } from "react";
 import Layout from "../components/layout";
 
-import { useStaticQuery, graphql } from "gatsby";
+// import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
-import Img from "gatsby-image"; // https://www.gatsbyjs.com/plugins/gatsby-image/
+// import Img from "gatsby-image"; // https://www.gatsbyjs.com/plugins/gatsby-image/
 
 const BrowseLayout = styled.div`
   display: flex;
