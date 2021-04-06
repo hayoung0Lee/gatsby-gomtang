@@ -8,7 +8,8 @@ const SectionStyle = styled.section`
   grid-column: 2 / -2;
   border-bottom: 1px solid green;
   min-height: 400px;
-  // margin-top: 50px;
+
+  font-family: "Noto Sans KR", sans-serif;
 
   // make section to grid container
   background: url("https://images.unsplash.com/photo-1518176258769-f227c798150e")
@@ -23,11 +24,12 @@ const SectionStyle = styled.section`
   // with 1fr, 전체를 채워버린다
   // auto-fit과 minmax를 함께 사용하면 언제든지 꽉 채우게 된다.
   // 아래의 예시에서는 최소 240px을 보장하고, 공간이 그러고도 남으면 서로 equally divide해서 1fr가진다
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   color: white;
 
   & h1 {
     text-align: center;
+    font-size: 30px;
   }
 
   & article {
@@ -37,15 +39,36 @@ const SectionStyle = styled.section`
     justify-content: space-between;
     flex-direction: column;
     box-sizing: border-box;
-    padding: 1rem;
+    margin-left: 50px;
+    margin-right: 50px;
 
     & p:first-child {
       margin-bottom: 30px;
+      line-height: 24px;
+      min-width: 260px;
     }
   }
 
-  @media (max-width: 624px) {
+  @media (max-width: 1000px) {
     // background-color: green;
+    & h1 {
+      padding-top: 40px;
+    }
+
+    & article {
+      & p:first-child {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+    & article {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
   }
 `;
 
