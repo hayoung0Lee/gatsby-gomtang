@@ -30,7 +30,8 @@ npm run build && npm run serve
 
 # How I developed this website
 
-- [Css Grid Layout - Header, Logo and Nav (다락재쉼터/옥이곰탕 프로젝트) + gatsby/react 입니다.](https://mytutorials.tistory.com/331)
+- [[다락재 쉼터] Gatsby프로젝트에 CSS grid 적용하기](https://mytutorials.tistory.com/331)
+- [[다락재 쉼터] 폰트 설정하기](https://mytutorials.tistory.com/332)
 
 # License
 

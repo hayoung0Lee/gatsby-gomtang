@@ -3,6 +3,9 @@
    License: none (public domain)
 */
 
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+/* font-family: 'Noto Sans KR', sans-serif; */
+
 html,
 body,
 div,
@@ -104,6 +107,7 @@ menu,
 nav,
 section {
   display: block;
+  font-family: "Noto Sans KR", sans-serif;
 }
 body {
   line-height: 1;
