@@ -36,6 +36,9 @@ npm run build && npm run serve
 - [[다락재쉼터] Gatsby with Redux](https://mytutorials.tistory.com/334)
 - [[다락재쉼터] react-responsive 적용하기](https://mytutorials.tistory.com/335)
 
+<!--
+- Gatsby 배포하기: https://hello-gatsby.usefulparadigm.com/posts/howto-deploy-gatsby-site-using-aws-amplify -->
+
 # License
 
 This is released under the MIT license. See [LICENSE](LICENSE) for details.
