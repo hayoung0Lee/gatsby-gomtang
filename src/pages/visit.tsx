@@ -1,10 +1,10 @@
 import React from "react";
 import Layout from "../components/layout";
 
-const EventPage = () => (
+const VisitPage = () => (
   <Layout>
-    <div>Event Page</div>
+    <div>Visit Page</div>
   </Layout>
 );
 
-export default EventPage;
+export default VisitPage;

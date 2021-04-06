@@ -1,10 +1,8 @@
 import React, { FC } from "react";
 import styled from "styled-components";
-// import Logo from "./logo";
-// import MenuBar from "./menu-bar";
+import LinkButton from "./link-button";
 
 const LogoStyle = styled.nav`
-  border-bottom: 1px solid black;
   min-height: 70px;
 
   display: flex;
@@ -12,18 +10,32 @@ const LogoStyle = styled.nav`
   align-items: center;
 
   & p {
-    border: 1px solid black;
+    min-height: 50px;
+    width: 180px;
+    display: inline;
+    font-size: 35px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    color: #e85a4f;
   }
 
   @media (max-width: 800px) {
     grid-column: span 2;
+
+    & p {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
   }
 `;
 
 const Logo: FC = () => {
   return (
     <LogoStyle>
-      <p>Logo</p>
+      <p className="logo">
+        <LinkButton to="/">다락재 쉼터 </LinkButton>
+      </p>
     </LogoStyle>
   );
 };

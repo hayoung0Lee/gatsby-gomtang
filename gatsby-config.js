@@ -16,8 +16,8 @@ module.exports = {
         link: "/browse",
       },
       {
-        name: "event",
-        link: "/event",
+        name: "visit",
+        link: "/visit",
       },
       {
         name: "contact",
