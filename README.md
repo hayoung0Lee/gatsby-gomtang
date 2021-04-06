@@ -38,6 +38,7 @@ npm run build && npm run serve
 
 <!--
 - Gatsby 배포하기: https://hello-gatsby.usefulparadigm.com/posts/howto-deploy-gatsby-site-using-aws-amplify -->
+<!-- - Gatsby responsive image: https://www.youtube.com/watch?v=XiG8gYJ7DiI&ab_channel=ADesignerWhoCodes -->
 
 # License
 

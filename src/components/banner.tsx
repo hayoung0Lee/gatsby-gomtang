@@ -1,20 +1,24 @@
 import React, { FC } from "react";
 import styled from "styled-components";
-// import Logo from "./logo";
-// import MenuBar from "./menu-bar";
+import Img from "gatsby-image";
+import { useStaticQuery, graphql } from "gatsby";
 
-const SectionStyle = styled.section`
+interface Props {
+  bg: string;
+}
+
+const SectionStyle = styled.section<Props>`
   // grid for section
   grid-column: 2 / -2;
   border-bottom: 1px solid green;
   min-height: 400px;
 
   font-family: "Noto Sans KR", sans-serif;
-
   // make section to grid container
-  background: url("https://images.unsplash.com/photo-1518176258769-f227c798150e")
-    center;
-  background-size: cover;
+  background: url(${(props) => props.bg}) center rgba(245, 223, 192, 0.7);
+  background-repeat: no-repeat;
+  background-color: rgba(255, 252, 220, 0.7);
+  color: #444441;
 
   /* Grid styles */
   display: grid;
@@ -25,15 +29,16 @@ const SectionStyle = styled.section`
   // auto-fit과 minmax를 함께 사용하면 언제든지 꽉 채우게 된다.
   // 아래의 예시에서는 최소 240px을 보장하고, 공간이 그러고도 남으면 서로 equally divide해서 1fr가진다
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  color: white;
 
   & h1 {
     text-align: center;
     font-size: 30px;
+    z-index: 100;
   }
 
   & article {
     // border: 1px solid black;
+    z-index: 100;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -43,14 +48,25 @@ const SectionStyle = styled.section`
     margin-right: 50px;
 
     & p:first-child {
-      margin-bottom: 30px;
+      margin-bottom: 24px;
       line-height: 24px;
       min-width: 260px;
     }
   }
 
+  position: relative;
+  .layer {
+    // background-color: red;
+    position: absolute;
+    width: 92%;
+    height: 80%;
+    left: 5%;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
   @media (max-width: 1000px) {
     // background-color: green;
+
     & h1 {
       padding-top: 40px;
     }
@@ -65,6 +81,13 @@ const SectionStyle = styled.section`
   @media (max-width: 500px) {
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 
+    .layer {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      height: 85%;
+    }
+
     & article {
       margin-left: 10px;
       margin-right: 10px;
@@ -73,8 +96,20 @@ const SectionStyle = styled.section`
 `;
 
 const Banner: FC = () => {
+  const data = useStaticQuery(graphql`
+    {
+      file(relativePath: { eq: "cat-at-the-restaurant.jpeg" }) {
+        childImageSharp {
+          fluid {
+            src
+          }
+        }
+      }
+    }
+  `);
+
   return (
-    <SectionStyle>
+    <SectionStyle bg={data.file.childImageSharp.fluid.src}>
       <h1>다락재 쉼터입니다</h1>
       <article>
         <p>
@@ -90,6 +125,7 @@ const Banner: FC = () => {
           </a>
         </p>
       </article>
+      <div className="layer"></div>
     </SectionStyle>
   );
 };
