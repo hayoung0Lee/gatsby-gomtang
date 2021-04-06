@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { Helmet } from "react-helmet";
 
 const MapStyle = styled.div`
   * {
@@ -7,59 +8,71 @@ const MapStyle = styled.div`
   }
 `;
 
+declare global {
+  interface Window {
+    daum: any;
+  }
+}
+
 const Map = () => {
+  // <!-- 3. 실행 스크립트 -->
+  const executeScript = () => {
+    alert("executeScript");
+    const scriptTag = document.createElement("script");
+    const inlineScript = document.createTextNode(`new daum.roughmap.Lander({
+    	"timestamp" : "1617690117752",
+    	"key" : "258ih",
+    	"mapWidth" : "640",
+    	"mapHeight" : "360"
+    }).render();`);
+    scriptTag.appendChild(inlineScript);
+    document.body.appendChild(scriptTag);
+  };
+
+  // <!-- 2. 설치 스크립트 * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다. -->
+  // document.write 문제가 발생해서 해당 파일을 직접 가져온다음 수정했음
+  const InstallScript = () => {
+    (function () {
+      alert("installScript");
+      var c = location.protocol == "https:" ? "https:" : "http:";
+      var a = "16137cec";
+
+      if (window.daum && window.daum.roughmap && window.daum.roughmap.cdn) {
+        return;
+      }
+      window.daum = window.daum || {};
+      window.daum.roughmap = {
+        cdn: a,
+        URL_KEY_DATA_LOAD_PRE: c + "//t1.daumcdn.net/roughmap/",
+        url_protocal: c,
+      };
+      var b =
+        c +
+        "//t1.daumcdn.net/kakaomapweb/place/jscss/roughmap/" +
+        a +
+        "/roughmapLander.js";
+
+      // document.write -> doumnet.body.append로 수정
+      const scriptTag = document.createElement("script");
+      scriptTag.src = b;
+      document.body.append(scriptTag);
+      scriptTag.onload = () => {
+        executeScript();
+      };
+    })();
+  };
+
+  useEffect(() => {
+    InstallScript();
+  }, []);
+
   return (
     <MapStyle>
-      <a
-        href="https://map.kakao.com/?urlX=848845&urlY=768527&urlLevel=3&map_type=TYPE_MAP&map_hybrid=false"
-        target="_blank"
-      >
-        <img
-          width="504"
-          height="310"
-          src="https://map2.daum.net/map/mapservice?FORMAT=PNG&SCALE=2.5&MX=848845&MY=768527&S=0&IW=504&IH=310&LANG=0&COORDSTM=WCONGNAMUL&logo=kakao_logo"
-          style={{ border: "1px solid #ccc" }}
-        />
-      </a>
-
+      {/* <!-- 1. 지도 노드 --> */}
       <div
-        className="hide"
-        style={{
-          overflow: `hidden`,
-          padding: `7px 11px`,
-          border: `1px solid #dfdfdf`,
-          borderColor: `rgba(0, 0, 0, 0.1)`,
-          borderRadius: `0 0 2px 2px`,
-          backgroundColor: `#f9f9f9`,
-          width: `482px`,
-        }}
-      >
-        <strong style={{ float: "left" }}>
-          <img
-            src="//t1.daumcdn.net/localimg/localimages/07/2018/pc/common/logo_kakaomap.png"
-            width="72"
-            height="16"
-            alt="카카오맵"
-          />
-        </strong>
-        <div style={{ float: "right", position: "relative" }}>
-          <a
-            style={{
-              fontSize: `12px`,
-              textDecoration: `none`,
-              float: `left`,
-              height: `15px`,
-              paddingTop: `1px`,
-              lineHeight: `15px`,
-              color: `#000`,
-            }}
-            target="_blank"
-            href="https://map.kakao.com/?urlX=848845&urlY=768527&urlLevel=3&map_type=TYPE_MAP&map_hybrid=false"
-          >
-            지도 크게 보기
-          </a>
-        </div>
-      </div>
+        id="daumRoughmapContainer1617690117752"
+        className="root_daum_roughmap root_daum_roughmap_landing"
+      ></div>
     </MapStyle>
   );
 };
