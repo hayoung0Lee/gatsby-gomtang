@@ -41,6 +41,7 @@ const NavStyle = styled.nav`
   @media (max-width: 800px) {
     & ul {
       padding-right: 0px;
+      padding-bottom: 10px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }

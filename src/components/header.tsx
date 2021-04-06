@@ -7,7 +7,9 @@ const HeaderStyle = styled.header`
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  background-color: #eae7dc;
+  background-color: #fffff9;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
+  z-index: 100;
 `;
 
 const Header: FC = () => {

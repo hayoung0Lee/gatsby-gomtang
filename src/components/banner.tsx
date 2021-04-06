@@ -8,7 +8,7 @@ const SectionStyle = styled.section`
   grid-column: 2 / -2;
   border-bottom: 1px solid green;
   min-height: 400px;
-  margin-top: 50px;
+  // margin-top: 50px;
 
   // make section to grid container
   background: url("https://images.unsplash.com/photo-1518176258769-f227c798150e")

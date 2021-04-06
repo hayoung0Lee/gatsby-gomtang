@@ -4,14 +4,18 @@ import Banner from "../components/banner";
 import styled from "styled-components";
 
 const IndexMenu = styled.section`
-  background-color: #c2cad0;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 70px;
+
+  font-family: "Noto Sans KR", sans-serif;
+
   & > h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
+    font-size: 20px;
+    color: #444441;
   }
 
   & > div {
@@ -22,7 +26,7 @@ const IndexMenu = styled.section`
     grid-auto-rows: 230px;
 
     gap: 20px 20px;
-    padding-top: 35px;
+    padding-top: 40px;
     padding-bottom: 50px;
 
     & > div {
@@ -32,13 +36,19 @@ const IndexMenu = styled.section`
 `;
 
 const SocialMenu = styled.section`
-  background-color: #7395ae;
+  // background-color: #7395ae;
+  margin-top: 40px;
   margin-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-family: "Noto Sans KR", sans-serif;
+
   & > h1 {
-    padding-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 20px;
+    color: #444441;
   }
 
   & > div {
@@ -49,7 +59,7 @@ const SocialMenu = styled.section`
     grid-auto-rows: 150px;
 
     gap: 20px 20px;
-    padding-top: 35px;
+    padding-top: 40px;
     padding-bottom: 50px;
 
     & > div {
