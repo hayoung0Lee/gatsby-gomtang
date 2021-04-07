@@ -10,15 +10,16 @@ interface Props {
 const SectionStyle = styled.section<Props>`
   // grid for section
   grid-column: 2 / -2;
-  border-bottom: 1px solid green;
+  // border-bottom: 1px solid green;
   min-height: 400px;
 
   font-family: "Noto Sans KR", sans-serif;
   // make section to grid container
   background: url(${(props) => props.bg}) center rgba(245, 223, 192, 0.7);
   background-repeat: no-repeat;
-  background-color: rgba(255, 252, 220, 0.7);
-  color: #444441;
+  background-color: rgba(255, 252, 220, 0.5);
+  background-size: cover;
+  color: #070600;
 
   /* Grid styles */
   display: grid;
@@ -61,7 +62,7 @@ const SectionStyle = styled.section<Props>`
     width: 92%;
     height: 80%;
     left: 5%;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.45);
   }
 
   @media (max-width: 1000px) {
@@ -98,7 +99,7 @@ const SectionStyle = styled.section<Props>`
 const Banner: FC = () => {
   const data = useStaticQuery(graphql`
     {
-      file(relativePath: { eq: "cat-at-the-restaurant.jpeg" }) {
+      file(relativePath: { eq: "sample1.jpeg" }) {
         childImageSharp {
           fluid {
             src

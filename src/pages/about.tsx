@@ -93,7 +93,7 @@ const SecondContent: FC<any> = ({ data }) => {
     <div className="reverse">
       <div className="img-wrapper">
         <img
-          src={data.howpic.childImageSharp.fluid.src}
+          src={data.second.childImageSharp.fluid.src}
           alt="다락재쉼터 경관"
         />
       </div>
@@ -128,6 +128,13 @@ export default AboutPage;
 export const query = graphql`
   {
     howpic: file(relativePath: { eq: "how-they-make.jpeg" }) {
+      childImageSharp {
+        fluid {
+          src
+        }
+      }
+    }
+    second: file(relativePath: { eq: "sample5.jpeg" }) {
       childImageSharp {
         fluid {
           src
