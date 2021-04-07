@@ -1,8 +1,8 @@
-import React, { useContext, useState, useReducer } from "react";
+import React, { useContext, useState, useReducer, FC } from "react";
 import Layout from "../components/layout";
 import Container from "../components/container";
 import styled from "styled-components";
-import { useStaticQuery, graphql } from "gatsby";
+import { graphql } from "gatsby";
 
 interface Props {
   menu1: string;
@@ -124,27 +124,7 @@ const BrowseStyle = styled.div<Props>`
   }
 `;
 
-const BrowsePage = () => {
-  const data = useStaticQuery(graphql`
-    {
-      menu1: file(relativePath: { eq: "menu1.png" }) {
-        childImageSharp {
-          fluid {
-            src
-          }
-        }
-      }
-
-      menu2: file(relativePath: { eq: "menu2.jpg" }) {
-        childImageSharp {
-          fluid {
-            src
-          }
-        }
-      }
-    }
-  `);
-
+const BrowsePage: FC<any> = ({ data }) => {
   return (
     <Layout>
       <Container>
@@ -172,3 +152,23 @@ const BrowsePage = () => {
 };
 
 export default BrowsePage;
+
+export const query = graphql`
+  {
+    menu1: file(relativePath: { eq: "menu1.png" }) {
+      childImageSharp {
+        fluid {
+          src
+        }
+      }
+    }
+
+    menu2: file(relativePath: { eq: "menu2.jpg" }) {
+      childImageSharp {
+        fluid {
+          src
+        }
+      }
+    }
+  }
+`;
