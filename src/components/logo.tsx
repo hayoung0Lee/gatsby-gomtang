@@ -11,7 +11,7 @@ const LogoStyle = styled.nav`
 
   & p {
     min-height: 50px;
-    width: 180px;
+    width: 190px;
     display: inline;
     font-size: 35px;
     text-align: center;
