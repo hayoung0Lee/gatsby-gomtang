@@ -4,42 +4,37 @@ import Map from "../components/map";
 import SmallMap from "../components/small-map";
 import styled from "styled-components";
 import { useMediaQuery } from "react-responsive";
+import Container from "../components/container";
 
 const VisitStyle = styled.div`
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  height: 100%;
   font-family: "Noto Sans KR", sans-serif;
+  grid-column: 2 / -2;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 70px 70px auto;
 
-  & > div {
-    grid-column: 2 / -2;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: 70px 70px auto;
+  & > h1 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 20px;
+    color: #444441;
+  }
 
-    & > h1 {
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      font-size: 20px;
-      color: #444441;
-    }
+  & > p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    color: #444441;
+    line-height: 23px;
+  }
 
-    & > p {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 15px;
-      color: #444441;
-      line-height: 23px;
-    }
-
-    & .kakaoMap {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding-bottom: 50px;
-    }
+  & .kakaoMap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
   }
 `;
 
@@ -51,8 +46,8 @@ const VisitPage = () => {
 
   return (
     <Layout>
-      <VisitStyle>
-        <div>
+      <Container>
+        <VisitStyle>
           <h1>다락재 쉼터 찾아오시는 길</h1>
           <p>
             경북 군위군 군위읍 도군로 2488. 방문을 환영합니다. 조심히 찾아오세요
@@ -60,8 +55,8 @@ const VisitPage = () => {
           <div className="kakaoMap">
             {isSmallScreen ? <SmallMap /> : <Map />}
           </div>
-        </div>
-      </VisitStyle>
+        </VisitStyle>
+      </Container>
     </Layout>
   );
 };

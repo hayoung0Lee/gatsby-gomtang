@@ -1,34 +1,20 @@
 import React, { useContext, useState, useReducer } from "react";
 import Layout from "../components/layout";
-
-// import { useStaticQuery, graphql } from "gatsby";
+import Container from "../components/container";
 import styled from "styled-components";
-// import Img from "gatsby-image"; // https://www.gatsbyjs.com/plugins/gatsby-image/
 
-const BrowseLayout = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 30px;
+const BrowseStyle = styled.div`
+  font-family: "Noto Sans KR", sans-serif;
+  grid-column: 2 / -2;
+  display: grid;
 `;
-
-type StateProps = {
-  menu1: boolean;
-  menu2: boolean;
-};
-
-type actionProps =
-  | {
-      type: "menu1";
-    }
-  | {
-      type: "menu2";
-    };
 
 const BrowsePage = () => {
   return (
     <Layout>
-      <div>browse</div>
+      <Container>
+        <BrowseStyle>Browse Page </BrowseStyle>
+      </Container>
     </Layout>
   );
 };
