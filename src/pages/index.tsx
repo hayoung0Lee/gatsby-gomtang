@@ -44,6 +44,7 @@ const SocialMenu = styled.section`
   font-family: "Noto Sans KR", sans-serif;
 
   & > h1 {
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,7 +76,7 @@ const SocialMenu = styled.section`
       background-color: #444441;
       color: white;
       height: 50px;
-      font-size: 30px;
+      font-size: 25px;
       display: flex;
       align-items: center;
       justify-content: center;
