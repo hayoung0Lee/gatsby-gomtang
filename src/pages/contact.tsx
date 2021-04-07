@@ -26,7 +26,7 @@ const ContactStyle = styled.div`
     gap: 100px;
     flex-wrap: wrap;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 120px;
 
     & > div {
       // border-bottom: 2px solid #444441;
