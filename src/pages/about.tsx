@@ -96,7 +96,7 @@ const SecondContent: FC<any> = ({ data }) => {
       <div className="content-wrapper">
         <h1>다락재 쉼터</h1>
         <div>
-          전통적인 방식 그대로 진한 한우 소머리 곰탕과 머리 고기 수육을 대접하고
+          전통적인 방식 그대로 진한 한우 소머리 곰탕과 머리 고기 수육을 만들고
           있습니다.
         </div>
       </div>
