@@ -36,6 +36,7 @@ npm run build && npm run serve
 - [[다락재쉼터] Gatsby with Redux](https://mytutorials.tistory.com/334)
 - [[다락재쉼터] react-responsive 적용하기](https://mytutorials.tistory.com/335)
 - [[다락재쉼터] background-image cover와 contain의 차이를 간단하게 짚고 넘어가자](https://mytutorials.tistory.com/336)
+- [[다락재쉼터] SEO 와 react-helment](https://mytutorials.tistory.com/337)
 <!--
 - Gatsby 배포하기: https://hello-gatsby.usefulparadigm.com/posts/howto-deploy-gatsby-site-using-aws-amplify -->
 <!-- - Gatsby responsive image: https://www.youtube.com/watch?v=XiG8gYJ7DiI&ab_channel=ADesignerWhoCodes -->
