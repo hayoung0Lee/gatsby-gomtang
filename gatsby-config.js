@@ -1,29 +1,32 @@
 module.exports = {
   siteMetadata: {
     title: "다락재 쉼터",
+    titleTemplate: "다락재 쉼터: %s",
     description: `다락재 쉼터입니다. 맛있는 한우 소머리 곰탕을 드시러 경상북도 군위로 놀러오세요`,
-    menuLinks: [
-      {
-        name: "home",
-        link: "/",
+    url: "https://gomtang.com",
+    menuLinks: {
+      home: {
+        title: "다락재 쉼터",
+        description: `다락재 쉼터입니다. 맛있는 한우 소머리 곰탕을 드시러 경상북도 군위로 놀러오세요`,
       },
-      {
-        name: "about",
-        link: "/about",
+      about: {
+        title: "다락재 쉼터의 한우 곰탕",
+        description: `다락재쉼터의 맛있는 한우 곰탕은 정성으로 만들고 있습니다`,
       },
-      {
-        name: "browse",
-        link: "/browse",
+      browse: {
+        title: "다락재 쉼터 한우 소머리 곰탕과 머리 고기",
+        description:
+          "다락재 쉼터 한우 소머리 곰탕과 머리 고기 메뉴를 소개합니다",
       },
-      {
-        name: "visit",
-        link: "/visit",
+      visit: {
+        title: "경상북도 군위의 다락재 쉼터",
+        description: "경상북도 군위의 다락재 쉼터로 놀러오세요",
       },
-      {
-        name: "contact",
-        link: "/contact",
+      contact: {
+        title: "다락재 쉼터의 연락처",
+        description: "다락재 쉼터에 단체 예약 및 전화 상담 정보입니다",
       },
-    ],
+    },
     image: "/images/how-they-make.jpeg",
   },
   plugins: [
