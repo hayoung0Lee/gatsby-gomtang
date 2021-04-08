@@ -23,7 +23,7 @@ const NavStyle = styled.nav`
       justify-content: center;
       align-items: center;
 
-      color: #8e8d8a;
+      color: #444441;
     }
 
     & li a > span {

@@ -51,7 +51,6 @@ const ContactStyle = styled.div`
         color: #444441;
         border: 1px solid black;
         height: 160px;
-        // height: 100%;
       }
     }
   }
@@ -78,11 +77,17 @@ const ContactPage = () => (
         <div className="content">
           <div className="first">
             <h2>주문 상담 전화</h2>
-            <p>054-383-1213</p>
+            <p>
+              054 383 1213 <br />
+              <br />
+              010 9368 6758 <br />
+              <br />
+              010 6612 1243
+            </p>
           </div>
           <div className="second">
             <h2>단체 예약</h2>
-            <p>단체 예약은 n일전까지 부탁드립니다. </p>
+            <p>단체 예약 환영합니다 </p>
           </div>
         </div>
       </ContactStyle>

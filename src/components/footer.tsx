@@ -7,7 +7,8 @@ const FooterStyle = styled.footer`
   // border-top: 1px solid black;
   font-family: "Noto Sans KR", sans-serif;
   grid-template-columns: repeat(12, 1fr);
-  background-color: #ffefdf;
+  // background-color: #eae7dc;
+  // margin-top: 50px;
   display: grid;
   min-height: 200px;
   height: fit-content;
@@ -88,12 +89,12 @@ const Footer: FC = () => {
           <p>다락재 쉼터</p>
         </div>
         <ul className="second">
-          <li>경북 군위군 군위읍 도군로 2488</li>
-          <li>대표의 딸: 김여정</li>
-          <li>사업자 등록번호</li>
-          <li>Email: 다락재쉼터.com</li>
-          <li>문의: 다락재 쉼터 번호</li>
-          <li>Copyright from Hayoung. Contact hayoung0.lee@gmail.com</li>
+          <li>대표자명: 김학규</li>
+          <li>위치: 경북 군위군 군위읍 도군로 2488</li>
+          <li>통신 판매업 등록번호: 2020-경북군위-14</li>
+          <li>사업자 등록번호: 713 33 00399</li>
+          <li>Email: yth3610@naver.com </li>
+          <li>문의: 054 383 1213 / 010 9368 6758 / 010 6612 1243</li>
         </ul>
         <div className="third">
           <p>마크</p>

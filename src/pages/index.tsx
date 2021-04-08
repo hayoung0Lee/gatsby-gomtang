@@ -83,7 +83,7 @@ const IndexPage: FC<React.ReactNode> = ({ children }) => {
         <div>
           <div className="placeholder">
             <h2>다락재 쉼터 인스타그램</h2>
-            <p>다락재 쉼터를 친구추가하고 더 많은 정보를 받아보세요</p>
+            <p>coming soon</p>
           </div>
           <div className="placeholder">
             <a href="https://smartstore.naver.com/drj_gomtang">
