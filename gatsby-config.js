@@ -3,7 +3,7 @@ module.exports = {
     title: "다락재 쉼터",
     titleTemplate: "다락재 쉼터: %s",
     description: `다락재 쉼터입니다. 맛있는 한우 소머리 곰탕을 드시러 경상북도 군위로 놀러오세요`,
-    url: "https://compassionate-spence-df7e3f.netlify.app",
+    url: "https://darakjaeswimteo.ga",
     menuLinks: {
       home: {
         title: "다락재 쉼터",
