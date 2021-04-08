@@ -6,21 +6,23 @@ import { useStaticQuery, graphql } from "gatsby";
 
 const SEO = ({ title, description, image, article }) => {
   const { pathname } = useLocation();
-  const { site } = useStaticQuery(query);
+  const { site, imgData } = useStaticQuery(query);
 
   const {
     defaultTitle,
     titleTemplate,
     defaultDescription,
     siteUrl,
-    defaultImage,
-    twitterUsername,
+    // defaultImage,
+    // twitterUsername,
   } = site.siteMetadata;
+
+  const defaultImage = imgData.childImageSharp.fluid.src.substring(1);
 
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
-    image: `${siteUrl}${image || defaultImage}`,
+    image: `${siteUrl}${defaultImage}`,
     url: `${siteUrl}${pathname}`,
   };
 
@@ -82,7 +84,13 @@ const query = graphql`
         titleTemplate
         defaultDescription: description
         siteUrl: url
-        defaultImage: image
+      }
+    }
+    imgData: file(relativePath: { eq: "how-they-make.jpeg" }) {
+      childImageSharp {
+        fluid {
+          src
+        }
       }
     }
   }

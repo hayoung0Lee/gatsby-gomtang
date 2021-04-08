@@ -3,7 +3,7 @@ module.exports = {
     title: "다락재 쉼터",
     titleTemplate: "다락재 쉼터: %s",
     description: `다락재 쉼터입니다. 맛있는 한우 소머리 곰탕을 드시러 경상북도 군위로 놀러오세요`,
-    url: "https://gomtang.com",
+    url: "https://compassionate-spence-df7e3f.netlify.app/",
     menuLinks: {
       home: {
         title: "다락재 쉼터",
@@ -27,7 +27,7 @@ module.exports = {
         description: "다락재 쉼터에 단체 예약 및 전화 상담 정보입니다",
       },
     },
-    image: "/images/how-they-make.jpeg",
+    // image: "how-they-make.jpeg",
   },
   plugins: [
     "gatsby-plugin-styled-components",
