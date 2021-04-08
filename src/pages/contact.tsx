@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/layout";
 import Container from "../components/container";
 import styled from "styled-components";
+import Seo from "../components/seo";
 
 const ContactStyle = styled.div`
   font-family: "Noto Sans KR", sans-serif;
@@ -70,6 +71,7 @@ const ContactStyle = styled.div`
 
 const ContactPage = () => (
   <Layout>
+    <Seo menuName="contact" />
     <Container>
       <ContactStyle>
         <h1>다락재 쉼터에 문의하기</h1>

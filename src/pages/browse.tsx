@@ -3,6 +3,7 @@ import Layout from "../components/layout";
 import Container from "../components/container";
 import styled from "styled-components";
 import { graphql } from "gatsby";
+import Seo from "../components/seo";
 
 interface Props {
   menu1: string;
@@ -127,6 +128,7 @@ const BrowseStyle = styled.div<Props>`
 const BrowsePage: FC<any> = ({ data }) => {
   return (
     <Layout>
+      <Seo menuName="browse" />
       <Container>
         <BrowseStyle
           menu1={data.menu1.childImageSharp.fluid.src}
@@ -142,7 +144,7 @@ const BrowsePage: FC<any> = ({ data }) => {
               </div>
             </div>
             <div className="second">
-              <div className="menuName">머리 고기</div>
+              <div className="menuName">머리 고기 수육</div>
             </div>
           </div>
         </BrowseStyle>

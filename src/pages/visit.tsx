@@ -5,6 +5,7 @@ import SmallMap from "../components/small-map";
 import styled from "styled-components";
 import { useMediaQuery } from "react-responsive";
 import Container from "../components/container";
+import Seo from "../components/seo";
 
 const VisitStyle = styled.div`
   font-family: "Noto Sans KR", sans-serif;
@@ -46,6 +47,7 @@ const VisitPage = () => {
 
   return (
     <Layout>
+      <Seo menuName="visit" />
       <Container>
         <VisitStyle>
           <h1>다락재 쉼터 찾아오시는 길</h1>

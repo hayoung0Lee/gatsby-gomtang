@@ -67,7 +67,7 @@ const SocialMenu = styled.section`
 const IndexPage: FC<React.ReactNode> = ({ children }) => {
   return (
     <Layout>
-      <Seo />
+      <Seo menuName="home" />
       <Banner />
       {/* <IndexMenu>
         <h1>다락재 쉼터는 어떤 곳인가요?</h1>

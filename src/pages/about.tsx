@@ -3,6 +3,7 @@ import Layout from "../components/layout";
 import { graphql } from "gatsby";
 import styled from "styled-components";
 import Container from "../components/container";
+import Seo from "../components/seo";
 
 const AboutStyle = styled.div`
   font-family: "Noto Sans KR", sans-serif;
@@ -113,6 +114,7 @@ const SecondContent: FC<any> = ({ data }) => {
 const AboutPage: FC<any> = ({ data }) => {
   return (
     <Layout>
+      <Seo menuName="about" />
       <Container>
         <AboutStyle>
           <FirstContent data={data} />

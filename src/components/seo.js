@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 import { useLocation } from "@reach/router";
 import { useStaticQuery, graphql } from "gatsby";
 
-const SEO = ({ title, description, image, article }) => {
+const SEO = ({ menuName }) => {
   const { pathname } = useLocation();
   const { site, imgData } = useStaticQuery(query);
 
@@ -13,12 +13,15 @@ const SEO = ({ title, description, image, article }) => {
     titleTemplate,
     defaultDescription,
     siteUrl,
+    menuLinks,
     // defaultImage,
     // twitterUsername,
   } = site.siteMetadata;
 
-  const defaultImage = imgData.childImageSharp.fluid.src.substring(1);
+  const defaultImage = imgData.childImageSharp.fluid.src;
 
+  const title = menuName ? menuLinks[menuName].title : "";
+  const description = menuName ? menuLinks[menuName].description : "";
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
@@ -33,7 +36,7 @@ const SEO = ({ title, description, image, article }) => {
 
       {seo.url && <meta property="og:url" content={seo.url} />}
 
-      {(article ? true : null) && <meta property="og:type" content="article" />}
+      <meta property="og:type" content="article" />
 
       {seo.title && <meta property="og:title" content={seo.title} />}
 
@@ -63,17 +66,11 @@ const SEO = ({ title, description, image, article }) => {
 export default SEO;
 
 SEO.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
-  image: PropTypes.string,
-  article: PropTypes.bool,
+  menuName: PropTypes.string,
 };
 
 SEO.defaultProps = {
-  title: null,
-  description: null,
-  image: null,
-  article: false,
+  menuName: null,
 };
 
 const query = graphql`
@@ -84,6 +81,28 @@ const query = graphql`
         titleTemplate
         defaultDescription: description
         siteUrl: url
+        menuLinks {
+          about {
+            title
+            description
+          }
+          browse {
+            title
+            description
+          }
+          contact {
+            title
+            description
+          }
+          home {
+            title
+            description
+          }
+          visit {
+            title
+            description
+          }
+        }
       }
     }
     imgData: file(relativePath: { eq: "how-they-make.jpeg" }) {
