@@ -50,9 +50,10 @@ const VisitPage = () => {
       <Seo menuName="visit" />
       <Container>
         <VisitStyle>
-          <h1>다락재 쉼터 찾아오시는 길</h1>
+          <h1>구니cc 주변의 다락재 쉼터 찾아오시는 길</h1>
           <p>
-            경북 군위군 군위읍 도군로 2488. 방문을 환영합니다. 조심히 찾아오세요
+            구니cc 주변 맛집 다락재 쉼터 방문을 환영합니다. 경북 군위군 군위읍
+            도군로 2488. 조심히 찾아오세요
           </p>
           <div className="kakaoMap">
             {isSmallScreen ? <SmallMap /> : <Map />}

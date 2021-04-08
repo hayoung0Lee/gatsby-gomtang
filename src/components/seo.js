@@ -30,7 +30,13 @@ const SEO = ({ menuName }) => {
   };
 
   return (
-    <Helmet title={seo.title} titleTemplate={titleTemplate}>
+    <Helmet
+      title={seo.title}
+      titleTemplate={titleTemplate}
+      htmlAttributes={{
+        lang: "ko",
+      }}
+    >
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
 

@@ -77,12 +77,7 @@ const FirstContent: FC<any> = ({ data }) => {
       </div>
       <div className="content-wrapper">
         <h1>다락재 쉼터</h1>
-        <div>
-          매일 한우곰탕을 끓입니다. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Esse cupiditate numquam dignissimos quae, provident
-          voluptatibus necessitatibus sed ipsam dolore cumque suscipit deleniti
-          aliquam rerum sunt cum inventore tenetur eum! Modi.
-        </div>
+        <div>매일 한우 곰탕을 정성스레 끓이고 있습니다</div>
       </div>
     </div>
   );
@@ -101,10 +96,8 @@ const SecondContent: FC<any> = ({ data }) => {
       <div className="content-wrapper">
         <h1>다락재 쉼터</h1>
         <div>
-          매일 한우곰탕을 끓입니다. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Esse cupiditate numquam dignissimos quae, provident
-          voluptatibus necessitatibus sed ipsam dolore cumque suscipit deleniti
-          aliquam rerum sunt cum inventore tenetur eum! Modi.
+          전통적인 방식 그대로 진한 한우 소머리 곰탕과 머리 고기 수육을 만들고
+          있습니다.
         </div>
       </div>
     </div>
