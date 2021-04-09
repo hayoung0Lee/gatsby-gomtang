@@ -41,6 +41,10 @@ const SEO = ({ menuName }) => {
         name="google-site-verification"
         content="2aJn7xMkp9QcdYbmlyDErwbQ56DD-G8bjMoZCuUaC1I"
       />
+      <meta
+        name="naver-site-verification"
+        content="059da54e39a47f13b7cc70270b475384ff5ca741"
+      />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
 
