@@ -51,6 +51,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-json`,
+    `gatsby-plugin-sitemap`,
     // Gatsby pwa
     // {
     //   resolve: "gatsby-plugin-manifest",
