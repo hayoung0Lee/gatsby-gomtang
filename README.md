@@ -46,6 +46,11 @@ npm run build && npm run serve
 
 <!-- - Gatsby responsive image: https://www.youtube.com/watch?v=XiG8gYJ7DiI&ab_channel=ADesignerWhoCodes -->
 
+# Reference
+
+- [Gatsby Blog 구글 검색 등록하기(1)](<https://brouk-devlog.netlify.app/react/Gatsby%20Blog%20%EA%B5%AC%EA%B8%80%20%EA%B2%80%EC%83%89%20%EB%93%B1%EB%A1%9D%ED%95%98%EA%B8%B0(1)/>)
+- [Gatsby Blog 검색엔진 최적화](https://www.jungyu.engineer/gatsby%20blog%20search%20engine%20optimization/)
+
 # License
 
 This is released under the MIT license. See [LICENSE](LICENSE) for details.

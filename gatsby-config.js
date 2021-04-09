@@ -52,7 +52,25 @@ module.exports = {
       },
     },
     `gatsby-transformer-json`,
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        sitemapSize: 5000,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://darakjaeswimteo.ga",
+        sitemap: "https://darakjaeswimteo.ga/sitemap.xml",
+        policy: [
+          {
+            userAgent: "*",
+            allow: "/",
+          },
+        ],
+      },
+    },
     // Gatsby pwa
     // {
     //   resolve: "gatsby-plugin-manifest",
