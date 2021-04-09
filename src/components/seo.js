@@ -37,6 +37,10 @@ const SEO = ({ menuName }) => {
         lang: "ko",
       }}
     >
+      <meta
+        name="google-site-verification"
+        content="2aJn7xMkp9QcdYbmlyDErwbQ56DD-G8bjMoZCuUaC1I"
+      />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
 
