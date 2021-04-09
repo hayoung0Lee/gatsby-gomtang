@@ -11,6 +11,7 @@ const AboutStyle = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: auto;
+  color: #444441;
 
   & > div {
     padding-top: 40px;
