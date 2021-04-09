@@ -34,7 +34,7 @@ const NavStyle = styled.nav`
     }
 
     & li:hover a > span {
-      border-bottom: 2px solid #8e8d8a;
+      border-bottom: 2px solid #444441;
     }
   }
 

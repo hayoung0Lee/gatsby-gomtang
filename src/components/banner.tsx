@@ -49,9 +49,19 @@ const SectionStyle = styled.section<Props>`
     margin-right: 50px;
 
     & p:first-child {
-      margin-bottom: 24px;
+      margin: auto;
+      margin-top: 40px;
+      margin-bottom: 40px;
       line-height: 24px;
       min-width: 260px;
+    }
+
+    & p:last-child {
+      background-color: #444441;
+      color: white;
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 3px;
     }
   }
 
@@ -74,7 +84,7 @@ const SectionStyle = styled.section<Props>`
 
     & article {
       & p:first-child {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
       }
     }
   }
@@ -111,12 +121,15 @@ const Banner: FC = () => {
 
   return (
     <SectionStyle bg={data.file.childImageSharp.fluid.src}>
-      <h1>다락재 쉼터입니다</h1>
+      <h1>
+        주인이 힘들고 고달플수록 <br />
+        손님은 맛있는 음식을 먹는다
+      </h1>
       <article>
         <p>
-          안녕하세요, 구니 CC 근처 맛집 다락재 쉼터입니다. 다락재쉼터에서 맛있는
-          한우 소머리 곰탕과 머리 고기 수육을 맛보세요. 한우 소머리 곰탕은
-          네이버 스마트 스토어에서도 주문하실 수 있습니다
+          안녕하세요 다락재 쉼터입니다. 옛날 방식 그대로 정성을 가득 담은 한우
+          소머리 곰탕과 머리 고기 수육을 다락재 쉼터에서 맛보세요. 한우 소머리
+          곰탕은 네이버 스마트 스토어를 통해 택배로 받아 보실 수 있습니다.
         </p>
         <p>
           <a href="https://smartstore.naver.com/drj_gomtang/products/4856718842?">
