@@ -42,6 +42,7 @@ const Map = ({
   return (
     <MapStyle>
       {/* <!-- 1. 지도 노드 --> */}
+      {/* webpack, chunk 분리 */}
       <div
         id="daumRoughmapContainer1617690117752"
         className="root_daum_roughmap root_daum_roughmap_landing"
