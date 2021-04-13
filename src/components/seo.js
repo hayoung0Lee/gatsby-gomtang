@@ -42,6 +42,10 @@ const SEO = ({ menuName }) => {
         content="2aJn7xMkp9QcdYbmlyDErwbQ56DD-G8bjMoZCuUaC1I"
       />
       <meta
+        name="google-site-verification"
+        content="VtIr8dxR8sN9b8mqalCS8fgCRdjiQoYaBKNGjY47JRQ"
+      />
+      <meta
         name="naver-site-verification"
         content="059da54e39a47f13b7cc70270b475384ff5ca741"
       />
